@@ -1,0 +1,80 @@
+/* 1) As cores e fontes do projeto */
+:root {
+  --pv-tinta: #1b2a41;   /* azul bem escuro: textos */
+  --pv-papel: #f6f7f9;   /* cinza bem claro: fundo */
+  --pv-coral: #d9485b;   /* coral: destaques */
+  --pv-verde: #2f6f73;   /* verde: detalhes */
+
+  --pv-fonte-titulo: "Bricolage Grotesque", sans-serif;
+  --pv-fonte-texto: "Source Sans 3", sans-serif;
+}
+
+/* 2) Avisando o Bootstrap para usar as nossas escolhas */
+:root {
+  --bs-body-font-family: var(--pv-fonte-texto);
+  --bs-body-color: var(--pv-tinta);
+  --bs-body-bg: var(--pv-papel);
+}
+
+/* 3) Fonte dos títulos */
+h1, h2, h3 {
+  font-family: var(--pv-fonte-titulo);
+}
+
+/* 4) Textinho em maiúsculas acima dos títulos */
+.pv-eyebrow {
+  color: var(--pv-verde);
+  letter-spacing: 0.08em;
+}
+
+/* 5) Logo da navbar com a fonte dos títulos */
+.navbar-brand {
+  font-family: var(--pv-fonte-titulo);
+}
+
+/* 6) Botão principal coral */
+.btn-primary {
+  --bs-btn-bg: var(--pv-coral);
+  --bs-btn-border-color: var(--pv-coral);
+  --bs-btn-hover-bg: #b8394b;
+  --bs-btn-hover-border-color: #b8394b;
+  --bs-btn-active-bg: #b8394b;
+  --bs-btn-active-border-color: #b8394b;
+}
+
+/* 7) Capa de livro feita só com CSS */
+.pv-capa {
+  aspect-ratio: 2 / 3;          /* formato de livro: 2 de largura para 3 de altura */
+  background: var(--capa);      /* a cor vem do HTML */
+  color: #fff;                  /* texto branco */
+  border-radius: 4px 8px 8px 4px;
+  padding: 14% 12% 12% 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* título em cima, autora embaixo */
+  position: relative;
+  box-shadow: 0 6px 18px rgba(27, 42, 65, 0.18);
+}
+
+/* A lombada do livro (faixa escura na esquerda) */
+.pv-capa::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 8%;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.pv-capa-titulo {
+  font-family: var(--pv-fonte-titulo);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.pv-capa-autor {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}

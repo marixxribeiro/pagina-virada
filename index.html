@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página Virada | Clube do livro</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!-- Nosso CSS: sempre DEPOIS do Bootstrap -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#topo">Página Virada</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#como-funciona">Como funciona</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estante">Estante</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#duvidas">Dúvidas</a></li>
+                </ul>
+                <a class="btn btn-primary ms-lg-3" href="#inscricao">Quero participar</a>
+            </div>
+
+        </div>
+    </nav>
+    <main id="topo">
+
+        <header class="py-5">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <!-- COLUNA 1: o texto que você já fez -->
+                    <div class="col-12 col-lg-7">
+                        <p class="text-uppercase fw-bold pv-eyebrow small">Clube do livro · Belo Horizonte</p>
+                        <h1 class="display-4 fw-bold mb-4">Um livro por mês, uma conversa boa no fim.</h1>
+                        <p class="lead mb-4">
+                            Lemos autoras e autores de língua portuguesa, de Machado a Carla Madeira.
+                            Uma vez por mês a gente se encontra num café para conversar sobre o que leu.
+                        </p>
+                        <a class="btn btn-primary btn-lg me-2" href="#inscricao">Quero participar</a>
+                        <a class="btn btn-outline-dark btn-lg" href="#estante">Ver a estante</a>
+                    </div>
+
+                    <!-- COLUNA 2: o card (novo) -->
+                    <div class="col-12 col-lg-5">
+                        <div class="card shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="text-uppercase fw-bold pv-eyebrow small">Leitura de novembro</p>
+                                <h2 class="h4 fw-bold">Tudo é Rio</h2>
+                                <p class="text-body-secondary">Carla Madeira · 2014</p>
+                                <p class="mb-0">Encontro: sábado, 28 de novembro, às 15h.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </header>
+
+
+        <section id="como-funciona" class="py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-6">
+                        <h2 class="fw-bold mb-4">Como funciona</h2>
+                        <p class="lead mb-4">A cada mês, um livro diferente. A cada encontro, uma conversa diferente.
+                        </p>
+                        <p>O clube é gratuito e aberto a qualquer pessoa interessada em ler e conversar sobre
+                            literatura. A inscrição é necessária para você receber o calendário e o local de cada
+                            encontro.</p>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <h3 class="h5 fw-bold">1. Faça a inscrição</h3>
+                        <p>Preencha o formulário no fim da página. Você recebe o calendário por e-mail.</p>
+                    </div>
+                    <div class="col">
+                        <h3 class="h5 fw-bold">2. Leia no seu ritmo</h3>
+                        <p>Cada livro tem cerca de quatro semanas. Livro físico, e-book ou audiobook: vale tudo.</p>
+                    </div>
+                    <div class="col">
+                        <h3 class="h5 fw-bold">3. Venha para a conversa</h3>
+                        <p>O encontro é no último sábado do mês. Não terminou o livro? Venha mesmo assim.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="estante" class="py-5">
+            <div class="container">
+
+                <h2 class="fw-bold mb-4">A estante do clube</h2>
+                <div class="d-flex flex-wrap gap-2 mb-4" id="filtros">
+                    <button type="button" class="btn btn-outline-dark btn-sm rounded-pill active"
+                        data-genero="todos">Todos</button>
+                    <button type="button" class="btn btn-outline-dark btn-sm rounded-pill"
+                        data-genero="Romance">Romance</button>
+                    <button type="button" class="btn btn-outline-dark btn-sm rounded-pill"
+                        data-genero="Clássico">Clássico</button>
+                    <button type="button" class="btn btn-outline-dark btn-sm rounded-pill"
+                        data-genero="Não ficção">Não ficção</button>
+                </div>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4" id="lista-livros">
+                    <!-- Os cards serão criados pelo JavaScript -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- JS do Bootstrap: no fim do body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
