@@ -14,6 +14,9 @@
   --bs-body-font-family: var(--pv-fonte-texto);
   --bs-body-color: var(--pv-tinta);
   --bs-body-bg: var(--pv-papel);
+  --bs-link-color-rgb: 217, 72, 91;
+  --bs-link-color: var(--pv-coral);
+  --bs-link-hover-color: #b8394b;
 }
 
 /* 3) Fonte dos títulos */
@@ -77,4 +80,11 @@ h1, h2, h3 {
 .pv-capa-autor {
   font-size: 0.8rem;
   opacity: 0.85;
+}
+
+/* 8) Accordion com as nossas cores */
+.accordion {
+  --bs-accordion-active-bg: #fbe9eb;
+  --bs-accordion-active-color: var(--pv-tinta);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(217, 72, 91, 0.25);
 }
