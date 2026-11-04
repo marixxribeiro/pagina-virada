@@ -3,31 +3,31 @@ const livros = [
   {
     id: "tudo-e-rio",
     titulo: "Tudo é Rio", autor: "Carla Madeira", ano: 2014,
-    cor: "#2f6f73", genero: "Romance",
+    cor: "#4b5fd6", texto:"#fffaf2", genero:"Romance",
     sobre: "Estreia da escritora mineira. Um casamento, uma perda e uma terceira personagem que muda a vida dos dois."
   },
   {
     id: "dom-casmurro",
     titulo: "Dom Casmurro", autor: "Machado de Assis", ano: 1899,
-    cor: "#1b2a41", genero: "Clássico",
+    cor: "#9b7fe8", texto:"#22243b",genero: "Clássico",
     sobre: "Bentinho conta a própria história com Capitu, e o leitor precisa decidir o quanto confia nesse narrador."
   },
   {
     id: "torto-arado",
     titulo: "Torto Arado", autor: "Itamar Vieira Junior", ano: 2019,
-    cor: "#8a5a2b", genero: "Romance",
+    cor: "#f26a3db", texto:"#22243b", genero: "Romance",
     sobre: "Duas irmãs no sertão da Bahia e a relação delas com a terra onde vivem e trabalham."
   },
   {
     id: "hora-da-estrela",
     titulo: "A Hora da Estrela", autor: "Clarice Lispector", ano: 1977,
-    cor: "#d9485b", genero: "Clássico",
+    cor: "#f48fb6", texto:"#22243b", genero: "Clássico",
     sobre: "A história de Macabéa, uma jovem nordestina no Rio, narrada por um escritor que hesita em contá-la."
   },
   {
     id: "quarto-de-despejo",
     titulo: "Quarto de Despejo", autor: "Carolina Maria de Jesus", ano: 1960,
-    cor: "#b5653a", genero: "Não ficção",
+    cor: "#a7b85c", texto:"#22243b", genero: "Não ficção",
     sobre: "O diário de uma mulher catadora de papel na favela do Canindé, em São Paulo."
   }
 ];
@@ -36,7 +36,7 @@ function criarCard(livro) {
     return `
     <div class="col">
       <article class="card h-100 border-0 bg-transparent">
-        <div class="pv-capa" style="--capa: ${livro.cor};">
+        <div class="pv-capa" style="--capa: ${livro.cor}; --capa-texto: ${livro.texto};">
           <span class="pv-capa-titulo">${livro.titulo}</span>
           <span class="pv-capa-autor">${livro.autor}</span>
         </div>

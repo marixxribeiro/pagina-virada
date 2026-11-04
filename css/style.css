@@ -1,12 +1,29 @@
 /* 1) As cores e fontes do projeto */
 :root {
-  --pv-tinta: #1b2a41;   /* azul bem escuro: textos */
-  --pv-papel: #f6f7f9;   /* cinza bem claro: fundo */
-  --pv-coral: #d9485b;   /* coral: destaques */
-  --pv-verde: #2f6f73;   /* verde: detalhes */
+  /* tinta e papel */
+  --pv-tinta: #22243b;        /* texto */
+  --pv-papel: #fffaf2;        /* fundo principal */
 
-  --pv-fonte-titulo: "Bricolage Grotesque", sans-serif;
-  --pv-fonte-texto: "Source Sans 3", sans-serif;
+  /* cores vivas: botões, detalhes, capas */
+  --pv-azul: #4b5fd6;
+  --pv-azul-escuro: #3a4cbb;
+  --pv-rosa: #f48fb6;
+  --pv-oliva: #a7b85c;
+  --pv-laranja: #f26a3d;
+  --pv-laranja-escuro: #d2511f; /* para textos pequenos, mais fácil de ler */
+  --pv-mostarda: #f5c13f;
+  --pv-lilas: #9b7fe8;
+
+  /* versões clarinhas: fundo das seções */
+  --pv-azul-claro: #dfe3fb;
+  --pv-rosa-claro: #fde1ec;
+  --pv-oliva-claro: #eef2d4;
+  --pv-mostarda-claro: #fdf0c4;
+  --pv-lilas-claro: #ece3fc;
+
+  /* fontes */
+  --pv-fonte-titulo: "Fraunces", Georgia, serif;
+  --pv-fonte-texto: "DM Sans", system-ui, sans-serif;
 }
 
 /* 2) Avisando o Bootstrap para usar as nossas escolhas */
@@ -14,9 +31,9 @@
   --bs-body-font-family: var(--pv-fonte-texto);
   --bs-body-color: var(--pv-tinta);
   --bs-body-bg: var(--pv-papel);
-  --bs-link-color-rgb: 217, 72, 91;
-  --bs-link-color: var(--pv-coral);
-  --bs-link-hover-color: #b8394b;
+  --bs-link-color-rgb: 75, 95, 214;
+  --bs-link-color: var(--pv-azul);
+  --bs-link-hover-color: var(--pv-azul-escuro);
 }
 
 /* 3) Fonte dos títulos */
@@ -26,7 +43,7 @@ h1, h2, h3 {
 
 /* 4) Textinho em maiúsculas acima dos títulos */
 .pv-eyebrow {
-  color: var(--pv-verde);
+  color: var(--pv-laranja-escuro);
   letter-spacing: 0.08em;
 }
 
@@ -35,21 +52,37 @@ h1, h2, h3 {
   font-family: var(--pv-fonte-titulo);
 }
 
-/* 6) Botão principal coral */
+/* 6) Botões em formato de pílula */
 .btn-primary {
-  --bs-btn-bg: var(--pv-coral);
-  --bs-btn-border-color: var(--pv-coral);
-  --bs-btn-hover-bg: #b8394b;
-  --bs-btn-hover-border-color: #b8394b;
-  --bs-btn-active-bg: #b8394b;
-  --bs-btn-active-border-color: #b8394b;
+  --bs-btn-bg: var(--pv-azul);
+  --bs-btn-border-color: var(--pv-azul);
+  --bs-btn-hover-bg: var(--pv-azul-escuro);
+  --bs-btn-hover-border-color: var(--pv-azul-escuro);
+  --bs-btn-active-bg: var(--pv-azul-escuro);
+  --bs-btn-active-border-color: var(--pv-azul-escuro);
+  --bs-btn-color: var(--pv-papel);
+  --bs-btn-hover-color: var(--pv-papel);
+}
+
+.btn-primary,
+.btn-outline-dark {
+  --bs-btn-border-radius: 50rem;   /* bem arredondado = pílula */
+  --bs-btn-font-weight: 500;
+}
+
+.btn-outline-dark {
+  --bs-btn-color: var(--pv-tinta);
+  --bs-btn-border-color: var(--pv-tinta);
+  --bs-btn-border-width: 2px;
+  --bs-btn-hover-bg: var(--pv-tinta);
+  --bs-btn-hover-color: var(--pv-papel);
 }
 
 /* 7) Capa de livro feita só com CSS */
 .pv-capa {
   aspect-ratio: 2 / 3;          /* formato de livro: 2 de largura para 3 de altura */
   background: var(--capa);      /* a cor vem do HTML */
-  color: #fff;                  /* texto branco */
+  color: var(--capa-texto, #fff);                 /* texto branco */
   border-radius: 4px 8px 8px 4px;
   padding: 14% 12% 12% 20%;
   display: flex;
@@ -84,7 +117,61 @@ h1, h2, h3 {
 
 /* 8) Accordion com as nossas cores */
 .accordion {
-  --bs-accordion-active-bg: #fbe9eb;
+  --bs-accordion-bg: var(--pv-papel);
+  --bs-accordion-active-bg: var(--pv-rosa-claro);
   --bs-accordion-active-color: var(--pv-tinta);
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(217, 72, 91, 0.25);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(75, 95, 214, 0.25);
+}
+
+/* 9) Fundos coloridos das seções */
+.pv-fundo-azul    { background-color: var(--pv-azul-claro); }
+.pv-fundo-rosa    { background-color: var(--pv-rosa-claro); }
+.pv-fundo-oliva   { background-color: var(--pv-oliva-claro); }
+.pv-fundo-mostarda { background-color: var(--pv-mostarda-claro); }
+.pv-fundo-lilas   { background-color: var(--pv-lilas-claro); }
+
+/* 10) Navbar no papel, com uma linha fininha embaixo */
+.pv-navbar {
+  background-color: var(--pv-papel);
+  border-bottom: 1px solid rgba(34, 36, 59, 0.1);
+}
+
+/* 11) Selo "Lendo agora" */
+.pv-selo {
+  background-color: var(--pv-mostarda);
+  color: var(--pv-tinta);
+}
+
+/* 12) Rabiscos decorativos do topo */
+.pv-hero {
+  position: relative;   /* os rabiscos se posicionam em relação ao topo */
+  overflow: hidden;     /* o que passar da borda fica escondido */
+}
+
+.pv-hero .container {
+  position: relative;
+  z-index: 1;           /* o texto fica POR CIMA dos rabiscos */
+}
+
+.pv-rabisco {
+  position: absolute;   /* "solto", não empurra nada */
+  pointer-events: none; /* o clique atravessa o rabisco */
+}
+
+.pv-rabisco-estrela {
+  width: 56px;
+  top: 32px;
+  right: 6%;
+}
+
+.pv-rabisco-onda {
+  width: 90px;
+  bottom: 28px;
+  left: 4%;
+}
+
+.pv-rabisco-estrelinha {
+  width: 26px;
+  top: 45%;
+  left: 55%;
 }
