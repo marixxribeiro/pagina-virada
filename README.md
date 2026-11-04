@@ -1,6 +1,6 @@
-<img width="1264" height="677" alt="image" src="https://github.com/user-attachments/assets/1a64da8d-800b-4e3a-a53f-7a39e2fc620b" />
-
 # Página Virada · clube do livro
+
+<img width="1264" height="677" alt="image" src="https://github.com/user-attachments/assets/1a64da8d-800b-4e3a-a53f-7a39e2fc620b" />
 
 Landing page responsiva de um clube do livro fictício em Belo Horizonte, feita com **Bootstrap 5**, HTML, CSS e JavaScript.
 
